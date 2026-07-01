@@ -1,0 +1,40 @@
+Profesyonel Statistics Modal Tasarımı:
+
+1. HEADER
+   - Title: "Analytics Dashboard"
+   - Period Selector (Pills):
+     [Günlük] [Haftalık] [Aylık]
+
+2. KPI CARDS (Overview - 3 columns)
+   ┌─────────────┬─────────────┬─────────────┐
+   │ Utilization │ Avg Wears   │ Active Items│
+   │    85%  ↑   │  2.4/gün ↑  │   15/20  ↑  │
+   └─────────────┴─────────────┴─────────────┘
+
+3. WEAR FREQUENCY CHART
+   - Bar chart showing wears by period
+   - X-axis: Days/Weeks/Months
+   - Y-axis: Wear count
+   - Trend line
+
+4. BRAND BREAKDOWN TABLE
+   ┌──────────────────────────────────────┐
+   │ Marka      Items  Wears  CPW   Rank  │
+   ├──────────────────────────────────────┤
+   │ Zara         5     12    2.4    ★★★  │
+   │ H&M          3      8    2.7    ★★   │
+   └──────────────────────────────────────┘
+
+5. TOP/BOTTOM PERFORMERS
+   - Most Worn Items (Top 3)
+   - Least Worn Items (Bottom 3)
+   - With thumbnails
+
+6. COLOR ANALYSIS
+   - Color distribution pie chart
+   - Most popular colors
+
+7. INSIGHTS & RECOMMENDATIONS
+   - "You wear X brand most often"
+   - "Y items haven't been worn in 30 days"
+   - "Your wardrobe utilization is Z%"

@@ -1,0 +1,152 @@
+{
+  "conditions": [],
+  "parameters": {
+    "active_offering_id": {
+      "defaultValue": {
+        "value": "mira_model_test"
+      },
+      "description": "Active RevenueCat offering identifier for paywall. Options: mira_model_test, pro_a, mira_icon",
+      "valueType": "STRING"
+    },
+    "use_fallback_offering": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Fallback to current offering if specified offering is not found",
+      "valueType": "BOOLEAN"
+    },
+    "maintenance_mode": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Enable maintenance mode to show maintenance screen to all users",
+      "valueType": "BOOLEAN"
+    },
+    "maintenance_title": {
+      "defaultValue": {
+        "value": "Bakım Çalışması"
+      },
+      "description": "Maintenance screen title (Turkish)",
+      "valueType": "STRING"
+    },
+    "maintenance_message": {
+      "defaultValue": {
+        "value": "Uygulamamız şu anda bakım çalışması nedeniyle kullanılamıyor. Lütfen daha sonra tekrar deneyin."
+      },
+      "description": "Maintenance screen message (Turkish)",
+      "valueType": "STRING"
+    },
+    "force_update_enabled": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Enable force update requirement",
+      "valueType": "BOOLEAN"
+    },
+    "minimum_app_version": {
+      "defaultValue": {
+        "value": "1.0.0"
+      },
+      "description": "Minimum required app version (semver format: X.Y.Z)",
+      "valueType": "STRING"
+    },
+    "force_update_title": {
+      "defaultValue": {
+        "value": "Güncelleme Gerekli"
+      },
+      "description": "Force update screen title (Turkish)",
+      "valueType": "STRING"
+    },
+    "force_update_message": {
+      "defaultValue": {
+        "value": "Uygulamayı kullanmaya devam etmek için lütfen son sürüme güncelleyin."
+      },
+      "description": "Force update screen message (Turkish)",
+      "valueType": "STRING"
+    }
+  },
+  "parameterGroups": {
+    "Paywall Configuration": {
+      "description": "RevenueCat paywall configuration parameters",
+      "parameters": {
+        "active_offering_id": {
+          "defaultValue": {
+            "value": "mira_model_test"
+          },
+          "description": "Active RevenueCat offering identifier for paywall. Options: mira_model_test, pro_a, mira_icon",
+          "valueType": "STRING"
+        },
+        "use_fallback_offering": {
+          "defaultValue": {
+            "value": "true"
+          },
+          "description": "Fallback to current offering if specified offering is not found",
+          "valueType": "BOOLEAN"
+        }
+      }
+    },
+    "App Control": {
+      "description": "App-level control parameters for maintenance and updates",
+      "parameters": {
+        "maintenance_mode": {
+          "defaultValue": {
+            "value": "false"
+          },
+          "description": "Enable maintenance mode to show maintenance screen to all users",
+          "valueType": "BOOLEAN"
+        },
+        "maintenance_title": {
+          "defaultValue": {
+            "value": "Bakım Çalışması"
+          },
+          "description": "Maintenance screen title (Turkish)",
+          "valueType": "STRING"
+        },
+        "maintenance_message": {
+          "defaultValue": {
+            "value": "Uygulamamız şu anda bakım çalışması nedeniyle kullanılamıyor. Lütfen daha sonra tekrar deneyin."
+          },
+          "description": "Maintenance screen message (Turkish)",
+          "valueType": "STRING"
+        },
+        "force_update_enabled": {
+          "defaultValue": {
+            "value": "false"
+          },
+          "description": "Enable force update requirement",
+          "valueType": "BOOLEAN"
+        },
+        "minimum_app_version": {
+          "defaultValue": {
+            "value": "1.0.0"
+          },
+          "description": "Minimum required app version (semver format: X.Y.Z)",
+          "valueType": "STRING"
+        },
+        "force_update_title": {
+          "defaultValue": {
+            "value": "Güncelleme Gerekli"
+          },
+          "description": "Force update screen title (Turkish)",
+          "valueType": "STRING"
+        },
+        "force_update_message": {
+          "defaultValue": {
+            "value": "Uygulamayı kullanmaya devam etmek için lütfen son sürüme güncelleyin."
+          },
+          "description": "Force update screen message (Turkish)",
+          "valueType": "STRING"
+        }
+      }
+    }
+  },
+  "version": {
+    "versionNumber": "1",
+    "updateOrigin": "REST_API",
+    "updateType": "INCREMENTAL_UPDATE",
+    "updateUser": {
+      "email": "setup@mira.app"
+    },
+    "description": "Initial paywall configuration setup"
+  }
+}

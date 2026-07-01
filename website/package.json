@@ -1,0 +1,18 @@
+{
+  "name": "boho-app-website",
+  "version": "1.0.0",
+  "description": "Boho App - AI Fashion Style Analyzer Website",
+  "scripts": {
+    "dev": "cd public && python3 -m http.server 8000",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "fashion",
+    "ai",
+    "style",
+    "outfit",
+    "analyzer"
+  ],
+  "author": "Boho App",
+  "license": "MIT"
+}

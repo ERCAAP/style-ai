@@ -1,0 +1,78 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Yardimci fonksiyonlar
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidImage() {
+      return request.resource.contentType.matches('image/.*');
+    }
+
+    function isValidSize(maxSizeMB) {
+      return request.resource.size < maxSizeMB * 1024 * 1024;
+    }
+
+    // Kullanici dosyalari
+    match /users/{userId}/{allPaths=**} {
+      // Okuma: sadece owner
+      allow read: if isOwner(userId);
+
+      // Yazma: owner + gorsel + max 10MB
+      allow write: if isOwner(userId)
+        && isValidImage()
+        && isValidSize(10);
+
+      // Silme: owner
+      allow delete: if isOwner(userId);
+    }
+
+    // Public template gorselleri
+    match /templates/{allPaths=**} {
+      // Herkes okuyabilir
+      allow read: if true;
+      // Yazma izni yok
+      allow write: if false;
+    }
+
+    // Public assets
+    match /public/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Outfit try-on temporary uploads (authenticated users only)
+    match /outfit-try-on/{allPaths=**} {
+      // Anyone authenticated can read
+      allow read: if isAuthenticated();
+
+      // Authenticated users can write images up to 10MB
+      allow write: if isAuthenticated()
+        && isValidImage()
+        && isValidSize(10);
+
+      // Authenticated users can delete their own uploads
+      allow delete: if isAuthenticated();
+    }
+
+    // Outfit analysis uploads (for OpenAI analysis)
+    match /outfit-analysis/{allPaths=**} {
+      // Public read access (for OpenAI to access the images)
+      allow read: if true;
+
+      // Authenticated users can write images up to 10MB
+      allow write: if isAuthenticated()
+        && isValidImage()
+        && isValidSize(10);
+
+      // Authenticated users can delete
+      allow delete: if isAuthenticated();
+    }
+  }
+}

@@ -1,0 +1,118 @@
+📁 BOHO APP WEBSITE - PROJE YAPISI
+═══════════════════════════════════════════════════════════
+
+website/
+│
+├── 📄 vercel.json              # Vercel deployment ayarları
+├── 📄 package.json             # Proje bilgileri ve scriptler
+├── 📄 .gitignore              # Git ignore dosyası
+│
+├── 📖 README.md                # Genel proje dokümantasyonu
+├── 📖 DEPLOYMENT.md            # Detaylı deployment rehberi (Türkçe)
+├── 📖 QUICKSTART.md            # Hızlı başlangıç rehberi (Türkçe)
+│
+└── public/                     # Web sitesi dosyaları
+    ├── 🌐 index.html           # Ana sayfa
+    ├── 🔒 privacy-policy.html  # Gizlilik Politikası & Şartlar
+    ├── 🤖 robots.txt           # SEO - Arama motorları için
+    └── 🗺️  sitemap.xml          # SEO - Site haritası
+
+═══════════════════════════════════════════════════════════
+
+✨ ÖZELLIKLER
+═══════════════════════════════════════════════════════════
+
+🎨 TASARIM:
+  • Modern gradient-based UI
+  • Smooth animations
+  • Fully responsive (mobile, tablet, desktop)
+  • MyTree style inspired design
+  • Clean and minimal
+
+📱 SAYFALAR:
+  • Ana Sayfa (index.html)
+    - Hero section with CTA
+    - 6 Feature cards
+    - How it works (3 steps)
+    - Final CTA section
+    - Footer
+  
+  • Privacy Policy (privacy-policy.html)
+    - Privacy Policy
+    - Terms of Service
+    - Contact information
+
+🔍 SEO:
+  • Meta tags
+  • Open Graph tags
+  • Twitter Card tags
+  • Sitemap.xml
+  • Robots.txt
+  • Canonical tags
+  • Structured data ready
+
+═══════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT ADIMLARI
+═══════════════════════════════════════════════════════════
+
+1️⃣ VERCEL CLI YÜKLE:
+   npm install -g vercel
+
+2️⃣ DEPLOY ET:
+   cd website
+   vercel --prod
+
+3️⃣ DOMAIN EKLE:
+   • Vercel Dashboard > Settings > Domains
+   • bohoapp.online ekle
+   • DNS kayıtlarını güncelle:
+     
+     A Record:
+     Name: @
+     Value: 76.76.21.21
+     
+     CNAME Record:
+     Name: www
+     Value: cname.vercel-dns.com
+
+4️⃣ BEKLE:
+   • DNS propagation: 10-30 dakika
+   • SSL otomatik aktif olur
+
+═══════════════════════════════════════════════════════════
+
+🎯 YAPILACAKLAR (Deployment Sonrası)
+═══════════════════════════════════════════════════════════
+
+✏️ ÖZELLEŞTIRME:
+  [ ] App Store linklerini güncelle (index.html satır ~385)
+  [ ] Email adreslerini güncelle (privacy-policy.html)
+  [ ] Gerekirse renkleri değiştir
+
+✅ TEST:
+  [ ] https://bohoapp.online adresini aç
+  [ ] Privacy policy sayfasını kontrol et
+  [ ] Mobil görünümü test et
+  [ ] SSL sertifikasını kontrol et (🔒 ikonu)
+
+📢 PAYLAŞ:
+  [ ] App store sayfalarından link ver
+  [ ] Social media'da duyur
+  [ ] Email imzana ekle
+
+═══════════════════════════════════════════════════════════
+
+📞 DESTEK
+═══════════════════════════════════════════════════════════
+
+Sorular için:
+  📧 support@bohoapp.online
+  📧 privacy@bohoapp.online
+
+Dokümantasyon:
+  📖 QUICKSTART.md   - Hızlı başlangıç
+  📖 DEPLOYMENT.md   - Detaylı deployment rehberi
+  📖 README.md       - Genel bilgiler
+
+═══════════════════════════════════════════════════════════

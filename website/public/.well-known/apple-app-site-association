@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9VHZC2S946.com.outfit.planner.app",
+        "paths": [
+          "/user",
+          "/user/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "9VHZC2S946.com.outfit.planner.app"
+    ]
+  }
+}
